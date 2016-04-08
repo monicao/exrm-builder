@@ -154,18 +154,3 @@ Exrm does not package mix tasks during the build process. This [github issue](ht
 - https://medium.com/@diamondgfx/deploying-phoenix-applications-with-exrm-97a3867ebd04#.hwapy3qs4
 
 
-docker run \
-    --name builder \
-    -v ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro \
-    -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro \
-    -v ~/.aws/credentials:/root/.aws/credentials:ro \
-    -e S3_BUCKET="releases-designdrop" \
-    -e VERSION="0.0.5" \
-    -e REPO_URL="git@github.com:monicao/designdrop.git" \
-    -e PORT=4000 \
-    -e SECRET_KEY_BASE=supersecret \
-    -e APP_HOST="staging.designdrop.io" \
-    -e DATABASE_URL="postgres://postgres:testing@pg/designdrop_staging" \
-    -it --rm mochromatic/exrm-builder
-
-
