@@ -1,6 +1,6 @@
 ## exrm docker image
 
-Based on msaraiva's Alpine Linux elixir-dev image. 64-bit architecture.
+Based on [msaraiva/elixir-dev](https://hub.docker.com/r/msaraiva/elixir-dev/) (Alpine linux 3.3, x86_64)
 
 This image builds a phoenix project, creates a release and uploads the release to S3. (It probably works with other elixir apps, but this README provides instructions for phoenix specifically.)
 
